@@ -90,9 +90,10 @@ Run `bundle exec rails console`
 ### BE Routes Quick Reference
 Append routes to `https://beanstackreplit.bill-the-dev.repl.co` after starting server `bundle exec rails s`
 For full detail run `bundle exec rails routes`  
+Nest form data within model params. For example, `?location[city]=Montville`
   
 #### Locations 
-- params: city, state (if applicable), country (two-letter code), and zip (3-character CA *or* 5-digit US, type:string) 
+- params: city, state (if applicable), country (two-letter code), and zip (3-character CA *or* 5-digit US, type:string)      
 - Locations Index (root)  GET`/` or `/api/v1/locations`
 - Locations Create        POST `/api/v1/locations` 
 - Locations Show          GET `/api/v1/locations/:id`
