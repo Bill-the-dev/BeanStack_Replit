@@ -1,10 +1,7 @@
-[![Run on Repl.it](https://repl.it/badge/github/Bill-the-dev/BeanStack)](https://replit.com/@Bill-the-dev/BeanStackReplit)
-
-
-
 # BeanStack Inventory Tracker
 
 Keep track of your coffee inventory!  
+[![Run on Repl.it](https://repl.it/badge/github/Bill-the-dev/BeanStack)](https://replit.com/@Bill-the-dev/BeanStackReplit)
 
 ## Setup
 
