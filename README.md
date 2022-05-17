@@ -1,4 +1,6 @@
-[![Run on Repl.it](https://repl.it/badge/github/Bill-the-dev/BeanStack)](https://repl.it/github/Bill-the-dev/BeanStack)
+[![Run on Repl.it](https://repl.it/badge/github/Bill-the-dev/BeanStack)](https://replit.com/@Bill-the-dev/BeanStackReplit)
+
+
 
 # BeanStack Inventory Tracker
 
@@ -152,14 +154,15 @@ This was a fun project to tackle!  Going forward, my immediate priorities includ
   - Future updates may require forking the repo and rehosting on Replit.
   - Credentials should be managed by Rails directly, Replit 'secrets' caused inconsistent behavior with API.
   - SQLite3 is only supported by Replit in `development` and not `production`.  Future updates may require remote PostgreSQL db or similar. 
+  - Front end completed for Items index and all CRUD functions using React and Material UI.  Not included for this submission
+
+For a peek at the front end and more lightweight backend, check out my main repo here!
+[BeanStack FS](https://github.com/Bill-the-dev/BeanStack)
 
 
 
 
-
-
-
-# Rails on Replit
+<!-- # Rails on Replit
 
 This is a template to get you started with Rails on Replit. It's ready to go so you can just hit run and start coding!
 
@@ -183,4 +186,4 @@ SQLite would work in development but we don't recommend running it in production
 
 ## Help
 
-If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support).
+If you need help you might be able to find an answer on our [docs](https://docs.replit.com) page. Feel free to report bugs and give us feedback [here](https://replit.com/support). -->
