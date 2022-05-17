@@ -1,0 +1,1054 @@
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Pie"], ["vendor", "Pulneys, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melty Pie"], ["vendor", "Pulneys, India"], ["quantity", nil], ["price", 11.97], ["description", "complex, tea-like, corriander, bergamot, graham cracker"], ["category", "Red Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:37.471585"], ["updated_at", "2022-05-17 19:23:37.471585"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Pie"], ["vendor", "Pulneys, India"], ["LIMIT", 1]]
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "mELTY pIE"], ["vendor", "Pulneys, India"], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Pie"], ["vendor", "Pulneys, Indib"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Heart Bean"], ["vendor", "Mogiana, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Heart Bean"], ["vendor", "Mogiana, Brazil"], ["quantity", nil], ["price", 12.68], ["description", "clean, silky, soy sauce, apricot, lemon"], ["category", "Java"], ["user_id", 1], ["created_at", "2022-05-17 19:23:37.867650"], ["updated_at", "2022-05-17 19:23:37.867650"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", ""], ["id", 1], ["vendor", "Mogiana, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" IS NULL AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["id", 1], ["vendor", "Mogiana, Brazil"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Postmodern Mug"], ["vendor", "Oaxaca, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Postmodern Mug"], ["vendor", "Oaxaca, Mexico"], ["quantity", nil], ["price", 20.66], ["description", "dry, juicy, carmel, cola, mandarin"], ["category", "Obata"], ["user_id", 1], ["created_at", "2022-05-17 19:23:37.954315"], ["updated_at", "2022-05-17 19:23:37.954315"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Postmodern Mug"], ["id", 1], ["vendor", "Oaxaca, Mexico"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Express Cake"], ["vendor", "Boquete, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Express Cake"], ["vendor", "Boquete, Panama"], ["quantity", nil], ["price", 6.5], ["description", "structured, creamy, hibiscus, sugar cane, green apple"], ["category", "Agaro"], ["user_id", 1], ["created_at", "2022-05-17 19:23:37.990812"], ["updated_at", "2022-05-17 19:23:37.990812"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Express Cake"], ["id", 1], ["vendor", "Boquete, Panama"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90041"], ["LIMIT", 1]]
+  [1m[36mLocation Create (1.8ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Dennybury"], ["state", "CA"], ["zip", "90041"], ["weather", ""], ["created_at", "2022-05-17 19:23:38.084001"], ["updated_at", "2022-05-17 19:23:38.084001"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" ORDER BY "locations"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90041"], ["LIMIT", 1]]
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90041"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90033"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Brandonton"], ["state", "CA"], ["zip", "90033"], ["weather", ""], ["created_at", "2022-05-17 19:23:38.142426"], ["updated_at", "2022-05-17 19:23:38.142426"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "90033"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "90033"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90076"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.5ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Chanachester"], ["state", "CA"], ["zip", "90076"], ["weather", ""], ["created_at", "2022-05-17 19:23:38.237216"], ["updated_at", "2022-05-17 19:23:38.237216"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "90076"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "90076"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90016"], ["LIMIT", 1]]
+  [1m[36mLocation Create (2.6ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Port Kieth"], ["state", "CA"], ["zip", "90016"], ["weather", ""], ["created_at", "2022-05-17 19:23:38.269460"], ["updated_at", "2022-05-17 19:23:38.269460"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", ""], ["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE "locations"."zip" IS NULL AND "locations"."id" != ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Blend"], ["vendor", "Lake Tawar, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Blend"], ["vendor", "Lake Tawar, Sumatra"], ["quantity", nil], ["price", 12.77], ["description", "bright, chewy, cherry, clove, cedar"], ["category", "Gesha"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.341528"], ["updated_at", "2022-05-17 19:23:38.341528"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Spilt Delight"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Spilt Delight"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["quantity", nil], ["price", 15.13], ["description", "sharp, big, brown sugar, green pepper, leafy greens"], ["category", "Pacamara"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.373259"], ["updated_at", "2022-05-17 19:23:38.373259"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Summer Mug"], ["vendor", "Lintong, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Summer Mug"], ["vendor", "Lintong, Sumatra"], ["quantity", nil], ["price", 8.23], ["description", "balanced, chewy, red apple, dill, cola"], ["category", "Sumatara"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.392925"], ["updated_at", "2022-05-17 19:23:38.392925"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Seattle Java"], ["vendor", "Harrar, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seattle Java"], ["vendor", "Harrar, Ethiopia"], ["quantity", nil], ["price", 12.57], ["description", "dry, chewy, cherry, cantaloupe, medicinal"], ["category", "Sarchimor"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.421480"], ["updated_at", "2022-05-17 19:23:38.421480"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Winter Java"], ["vendor", "Lintong, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winter Java"], ["vendor", "Lintong, Sumatra"], ["quantity", nil], ["price", 6.55], ["description", "structured, silky, dill, hay, mandarin"], ["category", "Agaro"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.439065"], ["updated_at", "2022-05-17 19:23:38.439065"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Choice"], ["vendor", "Travancore, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Choice"], ["vendor", "Travancore, India"], ["quantity", nil], ["price", 20.26], ["description", "unbalanced, full, soil, corriander, apricot"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.446735"], ["updated_at", "2022-05-17 19:23:38.446735"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Star"], ["vendor", "Estelí, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Star"], ["vendor", "Estelí, Nicaragua"], ["quantity", nil], ["price", 18.42], ["description", "soft, slick, sage, bergamot, cola"], ["category", "Dilla"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.456531"], ["updated_at", "2022-05-17 19:23:38.456531"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Street Cup"], ["vendor", "Lintong, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Street Cup"], ["vendor", "Lintong, Sumatra"], ["quantity", nil], ["price", 11.36], ["description", "complex, big, graham cracker, olive, white grape"], ["category", "Kent"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.466882"], ["updated_at", "2022-05-17 19:23:38.466882"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Morning Enlightenment"], ["vendor", "Wellega, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Morning Enlightenment"], ["vendor", "Wellega, Ethiopia"], ["quantity", nil], ["price", 8.44], ["description", "balanced, full, red apple, golden raisin, sugar cane"], ["category", "Red Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.475459"], ["updated_at", "2022-05-17 19:23:38.475459"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Cup"], ["vendor", "Acatenango, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melty Cup"], ["vendor", "Acatenango, Guatemala"], ["quantity", nil], ["price", 17.0], ["description", "dry, smooth, red currant, grassy, mandarin"], ["category", "Sumatara"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.484176"], ["updated_at", "2022-05-17 19:23:38.484176"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/items" for 127.0.0.1 at 2022-05-17 19:23:38 +0000
+Processing by Api::V1::ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 2254)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Strong Extract"], ["vendor", "Agalta, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Strong Extract"], ["vendor", "Agalta, Honduras"], ["quantity", nil], ["price", 13.01], ["description", "muted, chewy, tobacco, burnt sugar, snow pea"], ["category", "Barbuk Sudan"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.863710"], ["updated_at", "2022-05-17 19:23:38.863710"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blacktop Coffee"], ["vendor", "Boyacá, Colombia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blacktop Coffee"], ["vendor", "Boyacá, Colombia"], ["quantity", nil], ["price", 9.78], ["description", "astringent, juicy, cacao nibs, liquorice, honeydew"], ["category", "Ennarea"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.874848"], ["updated_at", "2022-05-17 19:23:38.874848"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Café Pie"], ["vendor", "Lake Tawar, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Café Pie"], ["vendor", "Lake Tawar, Sumatra"], ["quantity", nil], ["price", 8.17], ["description", "juicy, coating, peach, lemon, snow pea"], ["category", "Dilla"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.887057"], ["updated_at", "2022-05-17 19:23:38.887057"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (7.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Hello Solstice"], ["vendor", "Travancore, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hello Solstice"], ["vendor", "Travancore, India"], ["quantity", nil], ["price", 8.19], ["description", "structured, silky, cantaloupe, curry, clove"], ["category", "Catuai"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.916559"], ["updated_at", "2022-05-17 19:23:38.916559"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Red Delight"], ["vendor", "Mattari, Yemen"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Red Delight"], ["vendor", "Mattari, Yemen"], ["quantity", nil], ["price", 5.45], ["description", "pointed, big, mushroom, orange creamsicle, rye"], ["category", "Ethiopian Heirloom"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.931450"], ["updated_at", "2022-05-17 19:23:38.931450"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Look"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Look"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 16.65], ["description", "tart, syrupy, concord grape, nutella, pecan"], ["category", "Colombia"], ["user_id", 1], ["created_at", "2022-05-17 19:23:38.978800"], ["updated_at", "2022-05-17 19:23:38.978800"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kreb-Full-o Nuts"], ["vendor", "Harrar, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kreb-Full-o Nuts"], ["vendor", "Harrar, Ethiopia"], ["quantity", nil], ["price", 18.79], ["description", "wild, big, soy sauce, black cherry, hops"], ["category", "Kaffa"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.005180"], ["updated_at", "2022-05-17 19:23:39.005180"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Wake-up Treat"], ["vendor", "Lake Kivu Region, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wake-up Treat"], ["vendor", "Lake Kivu Region, Rwanda"], ["quantity", nil], ["price", 6.79], ["description", "bright, creamy, cranberry, hibiscus, bittersweet chocolate"], ["category", "Typica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.015274"], ["updated_at", "2022-05-17 19:23:39.015274"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Delight"], ["vendor", "Sul Minas, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Delight"], ["vendor", "Sul Minas, Brazil"], ["quantity", nil], ["price", 20.27], ["description", "crisp, coating, ginger, honey, orange"], ["category", "Pacamara"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.025768"], ["updated_at", "2022-05-17 19:23:39.025768"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Thanksgiving Town"], ["vendor", "Kibale, Uganda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Thanksgiving Town"], ["vendor", "Kibale, Uganda"], ["quantity", nil], ["price", 20.8], ["description", "dense, juicy, orange creamsicle, carbon, bittersweet chocolate"], ["category", "Pacas"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.037642"], ["updated_at", "2022-05-17 19:23:39.037642"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/items" for 127.0.0.1 at 2022-05-17 19:23:39 +0000
+Processing by Api::V1::ItemsController#index as HTML
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 1888)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Café Cowboy"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Café Cowboy"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["quantity", nil], ["price", 13.56], ["description", "quick, round, carmel, leathery, liquorice"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.070513"], ["updated_at", "2022-05-17 19:23:39.070513"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Goodbye Town"], ["vendor", "Hirazi, Yemen"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Goodbye Town"], ["vendor", "Hirazi, Yemen"], ["quantity", nil], ["price", 14.55], ["description", "wild, syrupy, fresh bread, carmel, walnut"], ["category", "Kaffa"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.085484"], ["updated_at", "2022-05-17 19:23:39.085484"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Cowboy"], ["vendor", "Guanacaste, Costa Rica"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Cowboy"], ["vendor", "Guanacaste, Costa Rica"], ["quantity", nil], ["price", 17.03], ["description", "muted, velvety, maple syrup, prune, red grape"], ["category", "Mokka"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.094951"], ["updated_at", "2022-05-17 19:23:39.094951"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Mug"], ["vendor", "Nueva Segovia, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melty Mug"], ["vendor", "Nueva Segovia, Nicaragua"], ["quantity", nil], ["price", 19.53], ["description", "soft, big, lavender, strawberry, black currant"], ["category", "Sarchimor"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.105521"], ["updated_at", "2022-05-17 19:23:39.105521"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Good-morning Equinox"], ["vendor", "Lintong, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Good-morning Equinox"], ["vendor", "Lintong, Sumatra"], ["quantity", nil], ["price", 17.69], ["description", "soft, syrupy, squash, cantaloupe, hops"], ["category", "Colombia"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.154911"], ["updated_at", "2022-05-17 19:23:39.154911"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "American Symphony"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "American Symphony"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 19.8], ["description", "crisp, juicy, blueberry, milk chocolate, cashew"], ["category", "Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.169413"], ["updated_at", "2022-05-17 19:23:39.169413"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Summer Select"], ["vendor", "Brahmaputra, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Summer Select"], ["vendor", "Brahmaputra, India"], ["quantity", nil], ["price", 15.91], ["description", "quick, coating, raisin, hibiscus, rose hips"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.193348"], ["updated_at", "2022-05-17 19:23:39.193348"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Pumpkin-spice Extract"], ["vendor", "Lekempti, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pumpkin-spice Extract"], ["vendor", "Lekempti, Ethiopia"], ["quantity", nil], ["price", 15.14], ["description", "crisp, watery, cherry, dill, barley"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.215570"], ["updated_at", "2022-05-17 19:23:39.215570"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Spilt Utopia"], ["vendor", "San Marcos, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Spilt Utopia"], ["vendor", "San Marcos, Guatemala"], ["quantity", nil], ["price", 15.01], ["description", "balanced, big, liquorice, raisin, watermelon"], ["category", "Kona"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.234577"], ["updated_at", "2022-05-17 19:23:39.234577"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Jacked Town"], ["vendor", "Kiamba, Kenya"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jacked Town"], ["vendor", "Kiamba, Kenya"], ["quantity", nil], ["price", 11.16], ["description", "complex, chewy, mushroom, lavender, dill"], ["category", "Agaro"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.255832"], ["updated_at", "2022-05-17 19:23:39.255832"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:39 +0000
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 607)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Reg's Pie"], ["vendor", "Gayo, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Reg's Pie"], ["vendor", "Gayo, Sumatra"], ["quantity", nil], ["price", 6.64], ["description", "juicy, big, lime, burnt sugar, fresh bread"], ["category", "Ethiopian Heirloom"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.306873"], ["updated_at", "2022-05-17 19:23:39.306873"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Seattle Level"], ["vendor", "Managua, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seattle Level"], ["vendor", "Managua, Nicaragua"], ["quantity", nil], ["price", 13.22], ["description", "dull, slick, vanilla, tangerine, cantaloupe"], ["category", "Catimors"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.327868"], ["updated_at", "2022-05-17 19:23:39.327868"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Wake-up Blend"], ["vendor", "Masaya, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wake-up Blend"], ["vendor", "Masaya, Nicaragua"], ["quantity", nil], ["price", 12.64], ["description", "dry, chewy, prune, butter, clove"], ["category", "Gimma"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.336958"], ["updated_at", "2022-05-17 19:23:39.336958"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Street Cake"], ["vendor", "Northern Region, Kilimanjaro, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Street Cake"], ["vendor", "Northern Region, Kilimanjaro, Tanzania"], ["quantity", nil], ["price", 14.52], ["description", "rounded, juicy, barley, raspberry, almond"], ["category", "Ethiopian Heirloom"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.344004"], ["updated_at", "2022-05-17 19:23:39.344004"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Solstice"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Solstice"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 15.22], ["description", "dry, big, molasses, red apple, grassy"], ["category", "Ennarea"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.351381"], ["updated_at", "2022-05-17 19:23:39.351381"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Captain's Cake"], ["vendor", "Mt. Kenya, Kenya"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Captain's Cake"], ["vendor", "Mt. Kenya, Kenya"], ["quantity", nil], ["price", 13.66], ["description", "tart, tea-like, marshmallow, lime, mushroom"], ["category", "Red Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.361818"], ["updated_at", "2022-05-17 19:23:39.361818"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Java"], ["vendor", "Biligiris, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Java"], ["vendor", "Biligiris, India"], ["quantity", nil], ["price", 13.33], ["description", "quick, slick, quakery, cinnamon, lemon"], ["category", "Barbuk Sudan"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.370745"], ["updated_at", "2022-05-17 19:23:39.370745"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Brooklyn Pie"], ["vendor", "Manjarabad, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brooklyn Pie"], ["vendor", "Manjarabad, India"], ["quantity", nil], ["price", 10.14], ["description", "muted, smooth, granola, white pepper, green pepper"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.379075"], ["updated_at", "2022-05-17 19:23:39.379075"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Hello Equinox"], ["vendor", "San Marcos, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hello Equinox"], ["vendor", "San Marcos, Guatemala"], ["quantity", nil], ["price", 20.3], ["description", "quick, coating, leathery, baggy, sugar cane"], ["category", "S288"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.389096"], ["updated_at", "2022-05-17 19:23:39.389096"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (7.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Cascara Look"], ["vendor", "Dipilto, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cascara Look"], ["vendor", "Dipilto, Nicaragua"], ["quantity", nil], ["price", 17.9], ["description", "wild, big, nectarine, lemongrass, raspberry"], ["category", "Geisha"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.407880"], ["updated_at", "2022-05-17 19:23:39.407880"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:39 +0000
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 385)
+  [1m[36mTRANSACTION (24.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (4.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Spilt Symphony"], ["vendor", "Chiriqui, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Spilt Symphony"], ["vendor", "Chiriqui, Panama"], ["quantity", nil], ["price", 14.94], ["description", "unbalanced, full, fresh bread, jasmine, lime"], ["category", "Villalobos"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.485034"], ["updated_at", "2022-05-17 19:23:39.485034"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "American Star"], ["vendor", "Nayarit, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "American Star"], ["vendor", "Nayarit, Mexico"], ["quantity", nil], ["price", 5.73], ["description", "muted, smooth, vanilla, figs, tomato"], ["category", "Dega"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.500457"], ["updated_at", "2022-05-17 19:23:39.500457"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Seattle Breaker"], ["vendor", "Brahmaputra, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seattle Breaker"], ["vendor", "Brahmaputra, India"], ["quantity", nil], ["price", 19.26], ["description", "lingering, watery, honey, snow pea, green-tea"], ["category", "Red Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.522196"], ["updated_at", "2022-05-17 19:23:39.522196"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "KrebStar Equinox"], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "KrebStar Equinox"], ["vendor", "Volcan, Panama"], ["quantity", nil], ["price", 9.32], ["description", "pointed, creamy, rubber, black cherry, medicinal"], ["category", "Kona"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.535381"], ["updated_at", "2022-05-17 19:23:39.535381"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Strong Utopia"], ["vendor", "Harrar, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Strong Utopia"], ["vendor", "Harrar, Ethiopia"], ["quantity", nil], ["price", 18.62], ["description", "unbalanced, watery, black cherry, sweet pea, bergamot"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.551184"], ["updated_at", "2022-05-17 19:23:39.551184"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blacktop Java"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blacktop Java"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 16.29], ["description", "dirty, creamy, jasmine, meyer lemon, hay"], ["category", "Catimors"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.567983"], ["updated_at", "2022-05-17 19:23:39.567983"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Goodbye Equinox"], ["vendor", "Montecillos, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Goodbye Equinox"], ["vendor", "Montecillos, Honduras"], ["quantity", nil], ["price", 14.19], ["description", "dry, creamy, milk chocolate, lime, figs"], ["category", "Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.579392"], ["updated_at", "2022-05-17 19:23:39.579392"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (7.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Heart Light"], ["vendor", "Nueva Segovia, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Heart Light"], ["vendor", "Nueva Segovia, Nicaragua"], ["quantity", nil], ["price", 18.46], ["description", "balanced, chewy, tamarind, passion fruit, wheat"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.600253"], ["updated_at", "2022-05-17 19:23:39.600253"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Jacked Town"], ["vendor", "Chichontepec, El Salvador"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jacked Town"], ["vendor", "Chichontepec, El Salvador"], ["quantity", nil], ["price", 5.99], ["description", "balanced, slick, lavender, nutmeg, barley"], ["category", "Kaffa"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.633674"], ["updated_at", "2022-05-17 19:23:39.633674"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Breaker"], ["vendor", "Agalta, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Breaker"], ["vendor", "Agalta, Honduras"], ["quantity", nil], ["price", 20.37], ["description", "dense, round, maple syrup, concord grape, coconut"], ["category", "SL28"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.646647"], ["updated_at", "2022-05-17 19:23:39.646647"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/items/100" for 127.0.0.1 at 2022-05-17 19:23:39 +0000
+Processing by Api::V1::ItemsController#show as HTML
+  Parameters: {"id"=>"100"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 100], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 204)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kreb-Full-o Solstice"], ["vendor", "Travancore, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kreb-Full-o Solstice"], ["vendor", "Travancore, India"], ["quantity", nil], ["price", 19.83], ["description", "mild, coating, mushroom, golden raisin, green apple"], ["category", "Catuai"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.690559"], ["updated_at", "2022-05-17 19:23:39.690559"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Strong Look"], ["vendor", "Rulindo, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Strong Look"], ["vendor", "Rulindo, Rwanda"], ["quantity", nil], ["price", 19.46], ["description", "tart, syrupy, nectarine, milk chocolate, carmel"], ["category", "Villa Sarchi"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.707423"], ["updated_at", "2022-05-17 19:23:39.707423"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Split Enlightenment"], ["vendor", "Brunca, Costa Rica"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Split Enlightenment"], ["vendor", "Brunca, Costa Rica"], ["quantity", nil], ["price", 5.37], ["description", "muted, chewy, lemon, banana, wheat"], ["category", "Catuai"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.715464"], ["updated_at", "2022-05-17 19:23:39.715464"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Major Treat"], ["vendor", "Chichontepec, El Salvador"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Major Treat"], ["vendor", "Chichontepec, El Salvador"], ["quantity", nil], ["price", 14.84], ["description", "muted, juicy, molasses, rose hips, nutmeg"], ["category", "Obata"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.735856"], ["updated_at", "2022-05-17 19:23:39.735856"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Red America"], ["vendor", "El Balsamo-Quetzaltepec, El Salvador"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Red America"], ["vendor", "El Balsamo-Quetzaltepec, El Salvador"], ["quantity", nil], ["price", 9.53], ["description", "quick, round, soil, bittersweet chocolate, hay"], ["category", "Kent"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.754682"], ["updated_at", "2022-05-17 19:23:39.754682"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Goodbye Forrester"], ["vendor", "Antigua, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Goodbye Forrester"], ["vendor", "Antigua, Guatemala"], ["quantity", nil], ["price", 8.86], ["description", "muted, coating, dill, leafy greens, rubber"], ["category", "Catimors"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.774097"], ["updated_at", "2022-05-17 19:23:39.774097"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Green Nuts"], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Green Nuts"], ["vendor", "Volcan, Panama"], ["quantity", nil], ["price", 10.01], ["description", "dense, full, fresh bread, milk chocolate, green-tea"], ["category", "Liberica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.794333"], ["updated_at", "2022-05-17 19:23:39.794333"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Goodbye Symphony"], ["vendor", "Western Region, Tarime, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Goodbye Symphony"], ["vendor", "Western Region, Tarime, Tanzania"], ["quantity", nil], ["price", 9.49], ["description", "delicate, big, white grape, nougat, ginger"], ["category", "Kaffa"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.813124"], ["updated_at", "2022-05-17 19:23:39.813124"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Strong Cowboy"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Strong Cowboy"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["quantity", nil], ["price", 7.91], ["description", "vibrant, chewy, marzipan, mandarin, sweet pea"], ["category", "Typica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.830198"], ["updated_at", "2022-05-17 19:23:39.830198"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Goodbye Star"], ["vendor", "El Paraiso, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Goodbye Star"], ["vendor", "El Paraiso, Honduras"], ["quantity", nil], ["price", 9.65], ["description", "structured, velvety, mushroom, rose hips, mushroom"], ["category", "S288"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.857291"], ["updated_at", "2022-05-17 19:23:39.857291"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/items" for 127.0.0.1 at 2022-05-17 19:23:39 +0000
+Processing by Api::V1::ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Code Fuel", "vendor"=>"Mtn Brew", "price"=>"8.99", "description"=>"gross, neon-green", "category"=>"Espresso", "user_id"=>"1"}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (6.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Code Fuel"], ["vendor", "Mtn Brew"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Code Fuel"], ["vendor", "Mtn Brew"], ["quantity", nil], ["price", 8.99], ["description", "gross, neon-green"], ["category", "Espresso"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.945295"], ["updated_at", "2022-05-17 19:23:39.945295"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 27ms (Views: 0.6ms | ActiveRecord: 7.1ms | Allocations: 1533)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Spilt Been"], ["vendor", "Sheveroys, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Spilt Been"], ["vendor", "Sheveroys, India"], ["quantity", nil], ["price", 8.31], ["description", "dull, chewy, cantaloupe, soil, orange"], ["category", "SL34"], ["user_id", 1], ["created_at", "2022-05-17 19:23:39.975644"], ["updated_at", "2022-05-17 19:23:39.975644"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Red Level"], ["vendor", "Jalisco, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Red Level"], ["vendor", "Jalisco, Mexico"], ["quantity", nil], ["price", 11.04], ["description", "tart, watery, cream, tamarind, strawberry"], ["category", "Typica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.009278"], ["updated_at", "2022-05-17 19:23:40.009278"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Street Light"], ["vendor", "Chiapas, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Street Light"], ["vendor", "Chiapas, Mexico"], ["quantity", nil], ["price", 7.04], ["description", "juicy, syrupy, tobacco, soil, cantaloupe"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.139763"], ["updated_at", "2022-05-17 19:23:40.139763"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Holiday Solstice"], ["vendor", "Western Region, Kigoma, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Holiday Solstice"], ["vendor", "Western Region, Kigoma, Tanzania"], ["quantity", nil], ["price", 20.45], ["description", "complex, velvety, orange, mint, dates"], ["category", "Villalobos"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.150828"], ["updated_at", "2022-05-17 19:23:40.150828"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "KrebStar Level"], ["vendor", "Kericho, Kenya"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "KrebStar Level"], ["vendor", "Kericho, Kenya"], ["quantity", nil], ["price", 6.72], ["description", "dirty, tea-like, meyer lemon, cacao nibs, lavender"], ["category", "Kent"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.158430"], ["updated_at", "2022-05-17 19:23:40.158430"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "American Choice"], ["vendor", "Huehuetenango, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "American Choice"], ["vendor", "Huehuetenango, Guatemala"], ["quantity", nil], ["price", 13.59], ["description", "deep, coating, snow pea, blueberry, raspberry"], ["category", "Liberica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.178698"], ["updated_at", "2022-05-17 19:23:40.178698"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Good-morning Cup"], ["vendor", "Southern Region, Mbinga, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Good-morning Cup"], ["vendor", "Southern Region, Mbinga, Tanzania"], ["quantity", nil], ["price", 18.29], ["description", "lingering, full, almond, sundried tomato, tobacco"], ["category", "Kona"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.187275"], ["updated_at", "2022-05-17 19:23:40.187275"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Wake-up Breaker"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wake-up Breaker"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 11.06], ["description", "astringent, slick, plum, leafy greens, lavender"], ["category", "Gimma"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.201909"], ["updated_at", "2022-05-17 19:23:40.201909"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blacktop Utopia"], ["vendor", "Oaxaca, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blacktop Utopia"], ["vendor", "Oaxaca, Mexico"], ["quantity", nil], ["price", 10.44], ["description", "juicy, chewy, meyer lemon, tomato, watermelon"], ["category", "Villa Sarchi"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.211063"], ["updated_at", "2022-05-17 19:23:40.211063"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Nuts"], ["vendor", "Kabirizi, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Nuts"], ["vendor", "Kabirizi, Rwanda"], ["quantity", nil], ["price", 6.58], ["description", "dense, creamy, quakery, medicinal, ginger"], ["category", "S288"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.231906"], ["updated_at", "2022-05-17 19:23:40.231906"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/items" for 127.0.0.1 at 2022-05-17 19:23:40 +0000
+Processing by Api::V1::ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Code Fuel", "vendor"=>"Mtn Brew", "price"=>"8.99", "description"=>"gross, neon-green", "category"=>"Espresso", "user_id"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Code Fuel"], ["vendor", "Mtn Brew"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Code Fuel"], ["vendor", "Mtn Brew"], ["quantity", nil], ["price", 8.99], ["description", "gross, neon-green"], ["category", "Espresso"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.251438"], ["updated_at", "2022-05-17 19:23:40.251438"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1152)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Choice"], ["vendor", "Western Region, Kigoma, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melty Choice"], ["vendor", "Western Region, Kigoma, Tanzania"], ["quantity", nil], ["price", 13.86], ["description", "lingering, round, potato defect!, hazelnut, carmel"], ["category", "Colombia"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.268934"], ["updated_at", "2022-05-17 19:23:40.268934"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Holiday Been"], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Holiday Been"], ["vendor", "Volcan, Panama"], ["quantity", nil], ["price", 6.27], ["description", "dry, smooth, corriander, tangerine, sugar cane"], ["category", "Kona"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.275275"], ["updated_at", "2022-05-17 19:23:40.275275"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Postmodern Equinox"], ["vendor", "Huila, Colombia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Postmodern Equinox"], ["vendor", "Huila, Colombia"], ["quantity", nil], ["price", 18.28], ["description", "vibrant, chewy, cinnamon, tobacco, lemon"], ["category", "Caturra"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.287902"], ["updated_at", "2022-05-17 19:23:40.287902"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Bluebery Mug"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bluebery Mug"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["quantity", nil], ["price", 15.01], ["description", "unbalanced, slick, milk chocolate, dill, quakery"], ["category", "Kaffa"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.297260"], ["updated_at", "2022-05-17 19:23:40.297260"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kreb-Full-o Star"], ["vendor", "Chiriqui, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kreb-Full-o Star"], ["vendor", "Chiriqui, Panama"], ["quantity", nil], ["price", 20.94], ["description", "dull, round, clementine, liquorice, bittersweet chocolate"], ["category", "SL34"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.310186"], ["updated_at", "2022-05-17 19:23:40.310186"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Hello Enlightenment"], ["vendor", "Estelí, Nicaragua"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hello Enlightenment"], ["vendor", "Estelí, Nicaragua"], ["quantity", nil], ["price", 6.34], ["description", "sharp, syrupy, carbon, black-tea, white grape"], ["category", "Red Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.325696"], ["updated_at", "2022-05-17 19:23:40.325696"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blue Town"], ["vendor", "Fraijanes, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blue Town"], ["vendor", "Fraijanes, Guatemala"], ["quantity", nil], ["price", 15.41], ["description", "structured, tea-like, cherry, sundried tomato, coconut"], ["category", "Mundo Novo"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.339109"], ["updated_at", "2022-05-17 19:23:40.339109"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Morning Town"], ["vendor", "Hidalgo, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (18.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Morning Town"], ["vendor", "Hidalgo, Mexico"], ["quantity", nil], ["price", 12.57], ["description", "sharp, syrupy, watermelon, green pepper, honeydew"], ["category", "Gimma"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.363416"], ["updated_at", "2022-05-17 19:23:40.363416"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Winter Extract"], ["vendor", "Jalisco, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winter Extract"], ["vendor", "Jalisco, Mexico"], ["quantity", nil], ["price", 15.75], ["description", "vibrant, chewy, meyer lemon, raspberry, white pepper"], ["category", "Blue Mountain"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.408004"], ["updated_at", "2022-05-17 19:23:40.408004"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Captain's Cake"], ["vendor", "Bugisu, Uganda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Captain's Cake"], ["vendor", "Bugisu, Uganda"], ["quantity", nil], ["price", 20.64], ["description", "structured, round, golden raisin, leathery, cocoa powder"], ["category", "Pacas"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.430101"], ["updated_at", "2022-05-17 19:23:40.430101"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/items" for 127.0.0.1 at 2022-05-17 19:23:40 +0000
+Processing by Api::V1::ItemsController#create as HTML
+  Parameters: {"item"=>{"name"=>"Code Fuel", "vendor"=>"Mtn Brew", "price"=>"-8.99", "description"=>"gross, neon-green", "category"=>"Espresso", "user_id"=>"1"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Code Fuel"], ["vendor", "Mtn Brew"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 22ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1246)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Seattle Breaker"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seattle Breaker"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 14.21], ["description", "structured, silky, tangerine, cream, honey"], ["category", "Mokka"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.490355"], ["updated_at", "2022-05-17 19:23:40.490355"]]
+  [1m[36mTRANSACTION (28.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Java"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Java"], ["vendor", "Northern Region, Oldeani, Tanzania"], ["quantity", nil], ["price", 19.57], ["description", "dry, round, passion fruit, tobacco, granola"], ["category", "Colombia"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.529361"], ["updated_at", "2022-05-17 19:23:40.529361"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Major America"], ["vendor", "Wellega, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Major America"], ["vendor", "Wellega, Ethiopia"], ["quantity", nil], ["price", 5.64], ["description", "bright, full, leathery, orange, butter"], ["category", "Villalobos"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.553996"], ["updated_at", "2022-05-17 19:23:40.553996"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "American Treat"], ["vendor", "Chikmagalur, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "American Treat"], ["vendor", "Chikmagalur, India"], ["quantity", nil], ["price", 8.65], ["description", "tart, silky, orange blossom, brown sugar, peach"], ["category", "Catuai"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.574787"], ["updated_at", "2022-05-17 19:23:40.574787"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Holiday Mug"], ["vendor", "Machakos, Kenya"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Holiday Mug"], ["vendor", "Machakos, Kenya"], ["quantity", nil], ["price", 9.89], ["description", "tart, full, green-tea, peanut, cream"], ["category", "Liberica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.597043"], ["updated_at", "2022-05-17 19:23:40.597043"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blue Light"], ["vendor", "Kabirizi, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blue Light"], ["vendor", "Kabirizi, Rwanda"], ["quantity", nil], ["price", 10.77], ["description", "vibrant, big, black currant, soy sauce, toast"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.625277"], ["updated_at", "2022-05-17 19:23:40.625277"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Nuts"], ["vendor", "Comayagua, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Nuts"], ["vendor", "Comayagua, Honduras"], ["quantity", nil], ["price", 19.79], ["description", "astringent, coating, peach, lychee, soil"], ["category", "SL28"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.644856"], ["updated_at", "2022-05-17 19:23:40.644856"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Street Forrester"], ["vendor", "Mattari, Yemen"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Street Forrester"], ["vendor", "Mattari, Yemen"], ["quantity", nil], ["price", 11.95], ["description", "sharp, full, hibiscus, pineapple, green grape"], ["category", "Pink Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.670702"], ["updated_at", "2022-05-17 19:23:40.670702"]]
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Been"], ["vendor", "Harrar, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Been"], ["vendor", "Harrar, Ethiopia"], ["quantity", nil], ["price", 11.84], ["description", "soft, big, sweet pea, ginger, clove"], ["category", "Yellow Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.696499"], ["updated_at", "2022-05-17 19:23:40.696499"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Captain's Java"], ["vendor", "Chiriqui, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Captain's Java"], ["vendor", "Chiriqui, Panama"], ["quantity", nil], ["price", 13.05], ["description", "clean, syrupy, raspberry, banana, papaya"], ["category", "Java"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.720734"], ["updated_at", "2022-05-17 19:23:40.720734"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:40 +0000
+Processing by Api::V1::ItemsController#update as HTML
+  Parameters: {"item"=>{"name"=>"Kicking Horse", "quantity"=>"22"}, "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kicking Horse"], ["id", 1], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Update (0.8ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Kicking Horse"], ["quantity", 22], ["updated_at", "2022-05-17 19:23:40.747671"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 1.5ms | Allocations: 1437)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Wake-up Choice"], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Wake-up Choice"], ["vendor", "Volcan, Panama"], ["quantity", nil], ["price", 12.88], ["description", "delicate, creamy, cinnamon, cream, grapefruit"], ["category", "Ennarea"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.772224"], ["updated_at", "2022-05-17 19:23:40.772224"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Jacked Mug"], ["vendor", "Agalta, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jacked Mug"], ["vendor", "Agalta, Honduras"], ["quantity", nil], ["price", 10.62], ["description", "complex, round, black cherry, dates, mango"], ["category", "SL34"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.795855"], ["updated_at", "2022-05-17 19:23:40.795855"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kreb-Full-o Cowboy"], ["vendor", "Antigua, Guatemala"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kreb-Full-o Cowboy"], ["vendor", "Antigua, Guatemala"], ["quantity", nil], ["price", 5.36], ["description", "deep, coating, carmel, mango, white grape"], ["category", "Catimors"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.817326"], ["updated_at", "2022-05-17 19:23:40.817326"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Café Nuts"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Café Nuts"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["quantity", nil], ["price", 5.75], ["description", "structured, syrupy, marshmallow, corriander, mushroom"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.833100"], ["updated_at", "2022-05-17 19:23:40.833100"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Split Bean"], ["vendor", "Alotepec-Metapán, El Salvador"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Split Bean"], ["vendor", "Alotepec-Metapán, El Salvador"], ["quantity", nil], ["price", 7.0], ["description", "quick, velvety, hazelnut, lychee, grapefruit"], ["category", "Mokka"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.862848"], ["updated_at", "2022-05-17 19:23:40.862848"]]
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Winter Look"], ["vendor", "Oaxaca, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winter Look"], ["vendor", "Oaxaca, Mexico"], ["quantity", nil], ["price", 12.09], ["description", "crisp, watery, white pepper, barley, musty"], ["category", "Caturra"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.913539"], ["updated_at", "2022-05-17 19:23:40.913539"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Joe Mug"], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joe Mug"], ["vendor", "Volcan, Panama"], ["quantity", nil], ["price", 17.4], ["description", "juicy, velvety, lime, honey, cacao nibs"], ["category", "Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.936088"], ["updated_at", "2022-05-17 19:23:40.936088"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Chocolate Bean"], ["vendor", "Kigeyo Washing Station, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolate Bean"], ["vendor", "Kigeyo Washing Station, Rwanda"], ["quantity", nil], ["price", 20.75], ["description", "clean, full, ginger, sundried tomato, pineapple"], ["category", "Gimma"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.951227"], ["updated_at", "2022-05-17 19:23:40.951227"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Hello Town"], ["vendor", "Cerrado, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hello Town"], ["vendor", "Cerrado, Brazil"], ["quantity", nil], ["price", 18.7], ["description", "structured, big, cashew, smokey, hay"], ["category", "Catuai"], ["user_id", 1], ["created_at", "2022-05-17 19:23:40.981224"], ["updated_at", "2022-05-17 19:23:40.981224"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Postmodern Bean"], ["vendor", "Gayo, Sumatra"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Postmodern Bean"], ["vendor", "Gayo, Sumatra"], ["quantity", nil], ["price", 20.1], ["description", "rounded, coating, papaya, corriander, grapefruit"], ["category", "Sarchimor"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.021810"], ["updated_at", "2022-05-17 19:23:41.021810"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:41 +0000
+Processing by Api::V1::ItemsController#update as HTML
+  Parameters: {"item"=>{"name"=>"Kicking Horse", "quantity"=>"22"}, "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kicking Horse"], ["id", 1], ["vendor", "Volcan, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Update (1.1ms)[0m  [1m[33mUPDATE "items" SET "name" = ?, "quantity" = ?, "updated_at" = ? WHERE "items"."id" = ?[0m  [["name", "Kicking Horse"], ["quantity", 22], ["updated_at", "2022-05-17 19:23:41.065917"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 35ms (Views: 1.5ms | ActiveRecord: 3.0ms | Allocations: 1272)
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Holiday Choice"], ["vendor", "Chiapas, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Holiday Choice"], ["vendor", "Chiapas, Mexico"], ["quantity", nil], ["price", 19.15], ["description", "faint, syrupy, plum, pineapple, tomato"], ["category", "Gesha"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.141404"], ["updated_at", "2022-05-17 19:23:41.141404"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Captain's Treat"], ["vendor", "Sidama, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (3.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Captain's Treat"], ["vendor", "Sidama, Ethiopia"], ["quantity", nil], ["price", 18.83], ["description", "faint, full, burnt sugar, smokey, black cherry"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.186256"], ["updated_at", "2022-05-17 19:23:41.186256"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Chocolate Select"], ["vendor", "Guanacaste, Costa Rica"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolate Select"], ["vendor", "Guanacaste, Costa Rica"], ["quantity", nil], ["price", 8.16], ["description", "tart, syrupy, leafy greens, coconut, sugar cane"], ["category", "S.4"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.228316"], ["updated_at", "2022-05-17 19:23:41.228316"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Major Breaker"], ["vendor", "Cerrado, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Create (2.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Major Breaker"], ["vendor", "Cerrado, Brazil"], ["quantity", nil], ["price", 7.8], ["description", "delicate, silky, sweet pea, toast, cinnamon"], ["category", "Ennarea"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.274152"], ["updated_at", "2022-05-17 19:23:41.274152"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Morning Bean"], ["vendor", "Rulindo, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Morning Bean"], ["vendor", "Rulindo, Rwanda"], ["quantity", nil], ["price", 14.42], ["description", "dry, syrupy, lemonade, black cherry, coconut"], ["category", "Kent"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.322089"], ["updated_at", "2022-05-17 19:23:41.322089"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Blacktop Coffee"], ["vendor", "Cerrado, Brazil"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blacktop Coffee"], ["vendor", "Cerrado, Brazil"], ["quantity", nil], ["price", 13.94], ["description", "dense, silky, blueberry, leathery, prune"], ["category", "Geisha"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.346967"], ["updated_at", "2022-05-17 19:23:41.346967"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Melty Star"], ["vendor", "Nariño, Colombia"], ["LIMIT", 1]]
+  [1m[36mItem Create (3.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Melty Star"], ["vendor", "Nariño, Colombia"], ["quantity", nil], ["price", 5.1], ["description", "complex, tea-like, raspberry, musty, raspberry"], ["category", "S.4"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.396108"], ["updated_at", "2022-05-17 19:23:41.396108"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Huggy Look"], ["vendor", "El Paraiso, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Huggy Look"], ["vendor", "El Paraiso, Honduras"], ["quantity", nil], ["price", 13.95], ["description", "dry, syrupy, honeysuckle, white grape, vanilla"], ["category", "Obata"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.417918"], ["updated_at", "2022-05-17 19:23:41.417918"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Captain's Breaker"], ["vendor", "Chiapas, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Captain's Breaker"], ["vendor", "Chiapas, Mexico"], ["quantity", nil], ["price", 20.34], ["description", "clean, coating, molasses, lemonade, marzipan"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.451882"], ["updated_at", "2022-05-17 19:23:41.451882"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Cascara Delight"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cascara Delight"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["quantity", nil], ["price", 11.17], ["description", "dull, slick, snow pea, green apple, sugar cane"], ["category", "Obata"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.468534"], ["updated_at", "2022-05-17 19:23:41.468534"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:41 +0000
+Processing by Api::V1::ItemsController#update as HTML
+  Parameters: {"item"=>{"name"=>nil}, "id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" IS NULL AND "items"."id" != ? AND "items"."vendor" = ? LIMIT ?[0m  [["id", 1], ["vendor", "Chiapas, Mexico"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 24ms (Views: 6.2ms | ActiveRecord: 0.9ms | Allocations: 1541)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Seattle Light"], ["vendor", "Mt. Kenya, Kenya"], ["LIMIT", 1]]
+  [1m[36mItem Create (3.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Seattle Light"], ["vendor", "Mt. Kenya, Kenya"], ["quantity", nil], ["price", 15.92], ["description", "clean, creamy, white pepper, sugar cane, dill"], ["category", "Java"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.555453"], ["updated_at", "2022-05-17 19:23:41.555453"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Chocolate Nuts"], ["vendor", "Chiriqui, Panama"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chocolate Nuts"], ["vendor", "Chiriqui, Panama"], ["quantity", nil], ["price", 13.37], ["description", "delicate, tea-like, snow pea, dates, bakers chocolate"], ["category", "Tafari-Kela"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.582743"], ["updated_at", "2022-05-17 19:23:41.582743"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Huggy Town"], ["vendor", "Gimbi, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Huggy Town"], ["vendor", "Gimbi, Ethiopia"], ["quantity", nil], ["price", 17.93], ["description", "rounded, chewy, corriander, dill, concord grape"], ["category", "Gesha"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.627627"], ["updated_at", "2022-05-17 19:23:41.627627"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Kreb-Full-o Light"], ["vendor", "Copan, Honduras"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kreb-Full-o Light"], ["vendor", "Copan, Honduras"], ["quantity", nil], ["price", 10.9], ["description", "crisp, juicy, honeydew, leafy greens, black cherry"], ["category", "Obata"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.651982"], ["updated_at", "2022-05-17 19:23:41.651982"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Captain's Light"], ["vendor", "Lekempti, Ethiopia"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Captain's Light"], ["vendor", "Lekempti, Ethiopia"], ["quantity", nil], ["price", 15.53], ["description", "faint, chewy, red currant, medicinal, soy sauce"], ["category", "Typica"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.669941"], ["updated_at", "2022-05-17 19:23:41.669941"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "The Captain's Volcano"], ["vendor", "Northern Region, Kilimanjaro, Tanzania"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Captain's Volcano"], ["vendor", "Northern Region, Kilimanjaro, Tanzania"], ["quantity", nil], ["price", 17.65], ["description", "faint, smooth, cranberry, green grape, carmel"], ["category", "S795"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.689335"], ["updated_at", "2022-05-17 19:23:41.689335"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Cascara Delight"], ["vendor", "Kayanza, Burundi"], ["LIMIT", 1]]
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cascara Delight"], ["vendor", "Kayanza, Burundi"], ["quantity", nil], ["price", 10.16], ["description", "astringent, velvety, green pepper, orange blossom, mandarin"], ["category", "S.4"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.707436"], ["updated_at", "2022-05-17 19:23:41.707436"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Postmodern Light"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["LIMIT", 1]]
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Postmodern Light"], ["vendor", "Gishamwana Coffee Island, Rwanda"], ["quantity", nil], ["price", 13.36], ["description", "clean, coating, green pepper, sundried tomato, bakers chocolate"], ["category", "Bourbon"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.723542"], ["updated_at", "2022-05-17 19:23:41.723542"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Street Cake"], ["vendor", "San Luis Potosi, Mexico"], ["LIMIT", 1]]
+  [1m[36mItem Create (13.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Street Cake"], ["vendor", "San Luis Potosi, Mexico"], ["quantity", nil], ["price", 7.34], ["description", "dense, round, papaya, granola, honey"], ["category", "Caturra"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.750195"], ["updated_at", "2022-05-17 19:23:41.750195"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "items" WHERE "items"."name" = ? AND "items"."vendor" = ? LIMIT ?[0m  [["name", "Veranda Volcano"], ["vendor", "Sheveroys, India"], ["LIMIT", 1]]
+  [1m[36mItem Create (2.0ms)[0m  [1m[32mINSERT INTO "items" ("name", "vendor", "quantity", "price", "description", "category", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Veranda Volcano"], ["vendor", "Sheveroys, India"], ["quantity", nil], ["price", 13.48], ["description", "tart, juicy, bittersweet chocolate, red grape, kiwi"], ["category", "Java"], ["user_id", 1], ["created_at", "2022-05-17 19:23:41.777996"], ["updated_at", "2022-05-17 19:23:41.777996"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/api/v1/items/1" for 127.0.0.1 at 2022-05-17 19:23:41 +0000
+Processing by Api::V1::ItemsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Destroy (3.0ms)[0m  [1m[31mDELETE FROM "items" WHERE "items"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+No template found for Api::V1::ItemsController#destroy, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 4.2ms | Allocations: 1149)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (10.0ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90086"], ["LIMIT", 1]]
+  [1m[36mLocation Create (1.0ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Ernieview"], ["state", "CA"], ["zip", "90086"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.877137"], ["updated_at", "2022-05-17 19:23:41.877137"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (7.8ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90043"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Hirtheberg"], ["state", "CA"], ["zip", "90043"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.891868"], ["updated_at", "2022-05-17 19:23:41.891868"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90058"], ["LIMIT", 1]]
+  [1m[36mLocation Create (1.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Port Ellynberg"], ["state", "CA"], ["zip", "90058"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.896140"], ["updated_at", "2022-05-17 19:23:41.896140"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90014"], ["LIMIT", 1]]
+  [1m[36mLocation Create (4.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "West Irvin"], ["state", "CA"], ["zip", "90014"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.926071"], ["updated_at", "2022-05-17 19:23:41.926071"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90035"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Millertown"], ["state", "CA"], ["zip", "90035"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.952979"], ["updated_at", "2022-05-17 19:23:41.952979"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90042"], ["LIMIT", 1]]
+  [1m[36mLocation Create (2.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "West Renettamouth"], ["state", "CA"], ["zip", "90042"], ["weather", ""], ["created_at", "2022-05-17 19:23:41.995149"], ["updated_at", "2022-05-17 19:23:41.995149"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/locations" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 1288)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90010"], ["LIMIT", 1]]
+  [1m[36mLocation Create (2.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Bechtelarton"], ["state", "CA"], ["zip", "90010"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.074569"], ["updated_at", "2022-05-17 19:23:42.074569"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90065"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "West Dominic"], ["state", "CA"], ["zip", "90065"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.097082"], ["updated_at", "2022-05-17 19:23:42.097082"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90077"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Sarahview"], ["state", "CA"], ["zip", "90077"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.110844"], ["updated_at", "2022-05-17 19:23:42.110844"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90018"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Franklyn"], ["state", "CA"], ["zip", "90018"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.120604"], ["updated_at", "2022-05-17 19:23:42.120604"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90089"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Timmy"], ["state", "CA"], ["zip", "90089"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.127988"], ["updated_at", "2022-05-17 19:23:42.127988"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90011"], ["LIMIT", 1]]
+  [1m[36mLocation Create (1.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Margaretside"], ["state", "CA"], ["zip", "90011"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.163641"], ["updated_at", "2022-05-17 19:23:42.163641"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/locations" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#index as HTML
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1087)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90063"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Clarencemouth"], ["state", "CA"], ["zip", "90063"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.215139"], ["updated_at", "2022-05-17 19:23:42.215139"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90057"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Bryonside"], ["state", "CA"], ["zip", "90057"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.237569"], ["updated_at", "2022-05-17 19:23:42.237569"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90015"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New Gillian"], ["state", "CA"], ["zip", "90015"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.244939"], ["updated_at", "2022-05-17 19:23:42.244939"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90078"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Darellhaven"], ["state", "CA"], ["zip", "90078"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.252192"], ["updated_at", "2022-05-17 19:23:42.252192"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90074"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Kilbackburgh"], ["state", "CA"], ["zip", "90074"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.258032"], ["updated_at", "2022-05-17 19:23:42.258032"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90061"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "North Jamarbury"], ["state", "CA"], ["zip", "90061"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.264266"], ["updated_at", "2022-05-17 19:23:42.264266"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms | Allocations: 511)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90079"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Carry"], ["state", "CA"], ["zip", "90079"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.284876"], ["updated_at", "2022-05-17 19:23:42.284876"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90036"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Soledadville"], ["state", "CA"], ["zip", "90036"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.291438"], ["updated_at", "2022-05-17 19:23:42.291438"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90013"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Lockmanstad"], ["state", "CA"], ["zip", "90013"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.296688"], ["updated_at", "2022-05-17 19:23:42.296688"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90029"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Quintinfort"], ["state", "CA"], ["zip", "90029"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.302075"], ["updated_at", "2022-05-17 19:23:42.302075"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90080"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Oraliastad"], ["state", "CA"], ["zip", "90080"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.359693"], ["updated_at", "2022-05-17 19:23:42.359693"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90049"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Schmidtstad"], ["state", "CA"], ["zip", "90049"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.371540"], ["updated_at", "2022-05-17 19:23:42.371540"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 363)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90095"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Ricki"], ["state", "CA"], ["zip", "90095"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.405867"], ["updated_at", "2022-05-17 19:23:42.405867"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90092"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Frederickville"], ["state", "CA"], ["zip", "90092"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.416015"], ["updated_at", "2022-05-17 19:23:42.416015"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90012"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Jacelyn"], ["state", "CA"], ["zip", "90012"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.425991"], ["updated_at", "2022-05-17 19:23:42.425991"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90098"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Bodechester"], ["state", "CA"], ["zip", "90098"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.436254"], ["updated_at", "2022-05-17 19:23:42.436254"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90053"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "West Kirk"], ["state", "CA"], ["zip", "90053"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.447748"], ["updated_at", "2022-05-17 19:23:42.447748"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90028"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Margeretville"], ["state", "CA"], ["zip", "90028"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.451778"], ["updated_at", "2022-05-17 19:23:42.451778"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/api/v1/locations/999" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#show as HTML
+  Parameters: {"id"=>"999"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 999], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 200)
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90054"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Edmund"], ["state", "CA"], ["zip", "90054"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.466473"], ["updated_at", "2022-05-17 19:23:42.466473"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90023"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Loweton"], ["state", "CA"], ["zip", "90023"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.471102"], ["updated_at", "2022-05-17 19:23:42.471102"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90060"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Grantburgh"], ["state", "CA"], ["zip", "90060"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.483575"], ["updated_at", "2022-05-17 19:23:42.483575"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90082"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Casperfurt"], ["state", "CA"], ["zip", "90082"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.492933"], ["updated_at", "2022-05-17 19:23:42.492933"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90069"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Gayleview"], ["state", "CA"], ["zip", "90069"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.501264"], ["updated_at", "2022-05-17 19:23:42.501264"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90025"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Del"], ["state", "CA"], ["zip", "90025"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.507296"], ["updated_at", "2022-05-17 19:23:42.507296"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/locations" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#create as HTML
+  Parameters: {"location"=>{"city"=>"Montville", "state"=>"NJ", "country"=>"US", "zip"=>"07045", "weather"=>"", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id. Context: { controller: Api::V1::LocationsController, action: create, request: #<ActionDispatch::Request:0x0000000008609c78>, params: {"location"=>{"city"=>"Montville", "state"=>"NJ", "country"=>"US", "zip"=>"07045", "weather"=>"", "user_id"=>"1"}, "controller"=>"api/v1/locations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "07045"], ["LIMIT", 1]]
+  [1m[36mLocation Create (15.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Montville"], ["state", "NJ"], ["zip", "07045"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.532827"], ["updated_at", "2022-05-17 19:23:42.532827"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 201 Created in 29ms (Views: 0.6ms | ActiveRecord: 16.0ms | Allocations: 1204)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90048"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.6ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Rod"], ["state", "CA"], ["zip", "90048"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.567287"], ["updated_at", "2022-05-17 19:23:42.567287"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90075"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Yostside"], ["state", "CA"], ["zip", "90075"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.586789"], ["updated_at", "2022-05-17 19:23:42.586789"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90064"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Lake Tifanyton"], ["state", "CA"], ["zip", "90064"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.600431"], ["updated_at", "2022-05-17 19:23:42.600431"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90027"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "West Margarito"], ["state", "CA"], ["zip", "90027"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.611205"], ["updated_at", "2022-05-17 19:23:42.611205"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90037"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Werner"], ["state", "CA"], ["zip", "90037"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.621894"], ["updated_at", "2022-05-17 19:23:42.621894"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90055"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Willardville"], ["state", "CA"], ["zip", "90055"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.635975"], ["updated_at", "2022-05-17 19:23:42.635975"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/locations" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#create as HTML
+  Parameters: {"location"=>{"city"=>"Montville", "state"=>"NJ", "country"=>"US", "zip"=>"07045", "weather"=>"", "user_id"=>"1"}}
+[31mUnpermitted parameter: :user_id. Context: { controller: Api::V1::LocationsController, action: create, request: #<ActionDispatch::Request:0x00000000086a1118>, params: {"location"=>{"city"=>"Montville", "state"=>"NJ", "country"=>"US", "zip"=>"07045", "weather"=>"", "user_id"=>"1"}, "controller"=>"api/v1/locations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "07045"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Montville"], ["state", "NJ"], ["zip", "07045"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.659817"], ["updated_at", "2022-05-17 19:23:42.659817"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Completed 201 Created in 12ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 1170)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90088"], ["LIMIT", 1]]
+  [1m[36mLocation Create (17.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Rodgerberg"], ["state", "CA"], ["zip", "90088"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.684808"], ["updated_at", "2022-05-17 19:23:42.684808"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90072"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Howefort"], ["state", "CA"], ["zip", "90072"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.707378"], ["updated_at", "2022-05-17 19:23:42.707378"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90031"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Lauren"], ["state", "CA"], ["zip", "90031"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.735828"], ["updated_at", "2022-05-17 19:23:42.735828"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90050"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Lisandrachester"], ["state", "CA"], ["zip", "90050"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.759515"], ["updated_at", "2022-05-17 19:23:42.759515"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90046"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Stromanchester"], ["state", "CA"], ["zip", "90046"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.764825"], ["updated_at", "2022-05-17 19:23:42.764825"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90032"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Dorisberg"], ["state", "CA"], ["zip", "90032"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.784463"], ["updated_at", "2022-05-17 19:23:42.784463"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started POST "/api/v1/locations" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#create as HTML
+  Parameters: {"location"=>{"city"=>"", "state"=>"NJ", "country"=>"US", "zip"=>"07045"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "07045"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 32ms (Views: 28.5ms | ActiveRecord: 0.5ms | Allocations: 1035)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90091"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Klingburgh"], ["state", "CA"], ["zip", "90091"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.867114"], ["updated_at", "2022-05-17 19:23:42.867114"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90081"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Jennaville"], ["state", "CA"], ["zip", "90081"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.891977"], ["updated_at", "2022-05-17 19:23:42.891977"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90087"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Littleland"], ["state", "CA"], ["zip", "90087"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.905358"], ["updated_at", "2022-05-17 19:23:42.905358"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90083"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Lucyberg"], ["state", "CA"], ["zip", "90083"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.919177"], ["updated_at", "2022-05-17 19:23:42.919177"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90045"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Stromanberg"], ["state", "CA"], ["zip", "90045"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.934630"], ["updated_at", "2022-05-17 19:23:42.934630"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90021"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New Devon"], ["state", "CA"], ["zip", "90021"], ["weather", ""], ["created_at", "2022-05-17 19:23:42.956025"], ["updated_at", "2022-05-17 19:23:42.956025"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:42 +0000
+Processing by Api::V1::LocationsController#update as HTML
+  Parameters: {"location"=>{"city"=>"Sparta", "zip"=>"07871"}, "id"=>"1"}
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (6.0ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "07871"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Update (0.2ms)[0m  [1m[33mUPDATE "locations" SET "city" = ?, "zip" = ?, "updated_at" = ? WHERE "locations"."id" = ?[0m  [["city", "Sparta"], ["zip", "07871"], ["updated_at", "2022-05-17 19:23:42.980346"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 6.5ms | Allocations: 1223)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90099"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.4ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Violeta"], ["state", "CA"], ["zip", "90099"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.013241"], ["updated_at", "2022-05-17 19:23:43.013241"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90056"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Leoniachester"], ["state", "CA"], ["zip", "90056"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.029731"], ["updated_at", "2022-05-17 19:23:43.029731"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (7.8ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90085"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Blondellland"], ["state", "CA"], ["zip", "90085"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.057460"], ["updated_at", "2022-05-17 19:23:43.057460"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90039"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "East Alva"], ["state", "CA"], ["zip", "90039"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.074151"], ["updated_at", "2022-05-17 19:23:43.074151"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90019"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.1ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Sipesberg"], ["state", "CA"], ["zip", "90019"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.086353"], ["updated_at", "2022-05-17 19:23:43.086353"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90024"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Lake Alizafurt"], ["state", "CA"], ["zip", "90024"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.101283"], ["updated_at", "2022-05-17 19:23:43.101283"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:43 +0000
+Processing by Api::V1::LocationsController#update as HTML
+  Parameters: {"location"=>{"city"=>"Sparta", "zip"=>"07871"}, "id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "07871"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mLocation Update (0.2ms)[0m  [1m[33mUPDATE "locations" SET "city" = ?, "zip" = ?, "updated_at" = ? WHERE "locations"."id" = ?[0m  [["city", "Sparta"], ["zip", "07871"], ["updated_at", "2022-05-17 19:23:43.124265"], ["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 1174)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90073"], ["LIMIT", 1]]
+  [1m[36mLocation Create (1.5ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "New Loretta"], ["state", "CA"], ["zip", "90073"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.156085"], ["updated_at", "2022-05-17 19:23:43.156085"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90066"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Macejkovicside"], ["state", "CA"], ["zip", "90066"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.191117"], ["updated_at", "2022-05-17 19:23:43.191117"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90047"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Port Lorenzohaven"], ["state", "CA"], ["zip", "90047"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.205914"], ["updated_at", "2022-05-17 19:23:43.205914"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90044"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Manualfurt"], ["state", "CA"], ["zip", "90044"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.225827"], ["updated_at", "2022-05-17 19:23:43.225827"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90026"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Kalynton"], ["state", "CA"], ["zip", "90026"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.240790"], ["updated_at", "2022-05-17 19:23:43.240790"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90068"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Vandervorttown"], ["state", "CA"], ["zip", "90068"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.257862"], ["updated_at", "2022-05-17 19:23:43.257862"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:43 +0000
+Processing by Api::V1::LocationsController#update as HTML
+  Parameters: {"location"=>{"city"=>nil}, "id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) AND "locations"."id" != ? LIMIT ?[0m  [["zip", "90073"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 17ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1172)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90093"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.7ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Port Alaineland"], ["state", "CA"], ["zip", "90093"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.304306"], ["updated_at", "2022-05-17 19:23:43.304306"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90070"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Hilllmouth"], ["state", "CA"], ["zip", "90070"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.339836"], ["updated_at", "2022-05-17 19:23:43.339836"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90071"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "O'Reillyview"], ["state", "CA"], ["zip", "90071"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.362242"], ["updated_at", "2022-05-17 19:23:43.362242"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90062"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.2ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "South Stevieside"], ["state", "CA"], ["zip", "90062"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.379013"], ["updated_at", "2022-05-17 19:23:43.379013"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90051"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Rachellechester"], ["state", "CA"], ["zip", "90051"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.412083"], ["updated_at", "2022-05-17 19:23:43.412083"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mLocation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "locations" WHERE LOWER("locations"."zip") = LOWER(?) LIMIT ?[0m  [["zip", "90030"], ["LIMIT", 1]]
+  [1m[36mLocation Create (0.3ms)[0m  [1m[32mINSERT INTO "locations" ("city", "state", "zip", "weather", "created_at", "updated_at", "country") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["city", "Macymouth"], ["state", "CA"], ["zip", "90030"], ["weather", ""], ["created_at", "2022-05-17 19:23:43.474611"], ["updated_at", "2022-05-17 19:23:43.474611"], ["country", "US"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/api/v1/locations/1" for 127.0.0.1 at 2022-05-17 19:23:43 +0000
+Processing by Api::V1::LocationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "location_items" ON "items"."id" = "location_items"."item_id" WHERE "location_items"."location_id" = ?[0m  [["location_id", 1]]
+  [1m[36mLocation Destroy (0.2ms)[0m  [1m[31mDELETE FROM "locations" WHERE "locations"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+No template found for Api::V1::LocationsController#destroy, rendering head :no_content
+Completed 204 No Content in 148ms (ActiveRecord: 1.4ms | Allocations: 10991)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
